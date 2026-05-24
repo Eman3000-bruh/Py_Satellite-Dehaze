@@ -2,6 +2,12 @@
 
 Physics-based satellite image dehazing using the **Atmospheric Scattering Model** and **Dark Channel Prior** (He et al., CVPR 2009).
 
+## Results
+
+| Original Hazy Image | Dehazed Output |
+| :---: | :---: |
+| <img src="samples/hazy_image.jpg" width="400" alt="Original Hazy Satellite Image"> | <img src="samples/hazy_image_dehazed.jpg" width="400" alt="Dehazed Satellite Image"> |
+
 ---
 
 ## Background

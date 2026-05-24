@@ -192,21 +192,6 @@ Stage 5 — Contrast & sharpen:
 For quick testing without datasets: Google Maps satellite screenshots of Delhi, Beijing, or LA (on bad air days) work well for visual evaluation.
 
 ---
-
-## Comparison: Underwater vs Satellite
-
-| Aspect | Underwater (existing) | Satellite (this project) |
-|--------|-----------------------|--------------------------|
-| Physical model | None (heuristic) | Atmospheric scattering model |
-| Primary technique | CLAHE on V channel | Dark Channel Prior |
-| Colour approach | Boost saturation (red lost in water) | No saturation boost (haze is white) |
-| Sky regions | Not relevant | Must detect and handle separately |
-| Transmission map | Not computed | Central to the pipeline |
-| CLAHE role | Primary dehazing step | Post-processing polish only |
-| CLAHE clip limit | 2.0 (aggressive) | 0.5–1.0 (light touch) |
-
----
-
 ## Known Limitations
 
 1. **DCP sky failure** — White/bright sky regions always violate the dark channel prior.  The sky mask mitigates but does not fully solve this.  Expect residual artefacts at sky/scene boundaries in complex images.
